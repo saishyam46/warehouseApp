@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org/">
+
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Welcome Mail</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+</head>
+
+<body>
+  <div class="container">
+        <div class="card">
+            <div class="card-header bg-info text-white text-center">
+                <h4>Welcome <b th:text="${user.name}"></b></h4>
+                <p><b>You have been succesfully registered to SERO APP !!!</b></p> 
+            </div>
+        </div>   
+        
+        <br>
+
+            <div class="card-body">
+            	<table class="table">
+					
+					<tr>
+						<th class="bg-success text-white">USER NAME :</th>
+						<th <b th:text="${user.email}" class="bg-success text-white">></b></th>
+					</tr>
+					
+					<tr>
+					    <th class="bg-success text-white">PASSWORD :</th>
+						<th th:text="${user.pwd}" class="bg-success text-white"></th>					    
+					</tr>
+				</table>
+                    
+                  <div align="left">
+					<img th:src="@{/images/logo3.png}"/>
+				  </div>
+            </div>
+           
+          		
+  </div>
+    </body>
+	
+</html>
